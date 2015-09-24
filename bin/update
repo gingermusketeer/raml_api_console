@@ -1,0 +1,44 @@
+#!/bin/bash
+
+# Move into known directory
+pushd "$( dirname "${BASH_SOURCE[0]}" )"
+
+# move into root directory
+cd ../
+assets_dir=$(pwd)/app/assets
+if [ -d 'tmp' ]; then
+  rm -r tmp
+fi
+
+mkdir tmp
+cd tmp
+
+echo "=== Downloading latest api-console ==="
+curl -OL https://github.com/mulesoft/api-console/archive/master.zip
+unzip master.zip
+
+echo "=== Replacing stylesheets ==="
+cp -r api-console-master/dist .
+for f in dist/styles/*; do
+  file_name=$(basename $f)
+  cp $f "$assets_dir/stylesheets/raml_api_console/$file_name.erb"
+done
+
+
+echo "=== Replacing scripts ==="
+scripts=$(find dist/scripts -maxdepth 1  -type f ! -name '*.min.js')
+for f in $scripts; do
+  file_name=$(basename $f)
+  echo $file_name
+  cp $f "$assets_dir/javascripts/raml_api_console/$file_name"
+done
+
+echo "=== Copying fonts ==="
+cp dist/fonts/* "$assets_dir/fonts/raml_api_console"
+
+echo "
+=== Scripted changes made
+   > Check changes before committing
+"
+
+popd
