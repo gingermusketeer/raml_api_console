@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Move into known directory
-cd "$( dirname "${BASH_SOURCE[0]}" )"
+pushd "$( dirname "${BASH_SOURCE[0]}" )"
 
 # move into root directory
 cd ../
@@ -40,3 +40,5 @@ echo "
 === Scripted changes made
    > Check changes before committing
 "
+
+popd
