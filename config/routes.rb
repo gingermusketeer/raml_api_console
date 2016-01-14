@@ -1,3 +1,3 @@
-RamlApiConsole::Engine.routes.draw do
-  get '/', to: 'api_console#index'
+RamlConsole::Engine.routes.draw do
+  get '/', to: 'console#index'
 end

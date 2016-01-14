@@ -1,4 +1,4 @@
-module RamlApiConsole
+module RamlConsole
   module ApplicationHelper
   end
 end

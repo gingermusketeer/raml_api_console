@@ -1,12 +1,12 @@
 $:.push File.expand_path("../lib", __FILE__)
 
 # Maintain your gem's version:
-require "raml_api_console/version"
+require "raml_console/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "raml_api_console"
-  s.version     = RamlApiConsole::VERSION
+  s.name        = "raml_console"
+  s.version     = RamlConsole::VERSION
   s.authors     = ["Max Brosnahan"]
   s.email       = ["maximilianbrosnahan@gmail.com"]
   # s.homepage    = "TODO"

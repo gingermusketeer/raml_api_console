@@ -1,4 +1,4 @@
-# RamlApiConsole
+# RamlConsole
 
 Provides a rails engine for serving raml api documentation inside your rails app. It is a wrapper around https://github.com/mulesoft/api-console
 
