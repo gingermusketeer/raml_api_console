@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    raml_api_console (0.0.1)
+    raml_console (0.0.1)
       rails (~> 4.2.3)
 
 GEM
@@ -102,7 +102,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  raml_api_console!
+  raml_console!
   sqlite3
 
 BUNDLED WITH

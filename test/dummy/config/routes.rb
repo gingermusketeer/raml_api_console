@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
 
-  mount RamlApiConsole::Engine => "/raml_api_console"
+  mount RamlConsole::Engine => "/raml_console"
 end

@@ -21,7 +21,7 @@ echo "=== Replacing stylesheets ==="
 cp -r api-console-master/dist .
 for f in dist/styles/*; do
   file_name=$(basename $f)
-  cp $f "$assets_dir/stylesheets/raml_api_console/$file_name.erb"
+  cp $f "$assets_dir/stylesheets/raml_console/$file_name.erb"
 done
 
 
@@ -30,11 +30,11 @@ scripts=$(find dist/scripts -maxdepth 1  -type f ! -name '*.min.js')
 for f in $scripts; do
   file_name=$(basename $f)
   echo $file_name
-  cp $f "$assets_dir/javascripts/raml_api_console/$file_name"
+  cp $f "$assets_dir/javascripts/raml_console/$file_name"
 done
 
 echo "=== Copying fonts ==="
-cp dist/fonts/* "$assets_dir/fonts/raml_api_console"
+cp dist/fonts/* "$assets_dir/fonts/raml_console"
 
 echo "
 === Scripted changes made

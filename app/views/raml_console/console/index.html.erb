@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>API Console</title>
-  <%= stylesheet_link_tag "raml_api_console/api-console-#{@theme}-theme", media: "all", class: "theme" %>
+  <%= stylesheet_link_tag "raml_console/api-console-#{@theme}-theme", media: "all", class: "theme" %>
 </head>
 <body ng-app="ramlConsoleApp" ng-cloak class="raml-console-body">
   <raml-console src="<%= @raml_source %>" disable-theme-switcher disable-raml-client-generator></raml-console>
-  <%= javascript_include_tag "raml_api_console/api-console-vendor" %>
-  <%= javascript_include_tag "raml_api_console/api-console" %>
+  <%= javascript_include_tag "raml_console/api-console-vendor" %>
+  <%= javascript_include_tag "raml_console/api-console" %>
   <script>
     $.noConflict();
   </script>
