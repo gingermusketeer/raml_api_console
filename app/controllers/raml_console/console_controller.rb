@@ -1,6 +1,5 @@
 module RamlConsole
   class ConsoleController < ApplicationController
-    layout nil
 
     def index
       if params[:raml_source]
