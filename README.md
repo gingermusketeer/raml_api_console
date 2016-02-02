@@ -8,6 +8,3 @@ The distribution code from https://github.com/mulesoft/api-console has been copi
 ## Known bugs
 - Mangling JS will break the dependency injection used by angular in https://github.com/mulesoft/api-console
   - Ensure mangling is disabled
-
-## TODO
- - Add upgrade script to pull down the latest version of the console
