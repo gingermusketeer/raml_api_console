@@ -14,11 +14,11 @@ mkdir tmp
 cd tmp
 
 echo "=== Downloading latest api-console ==="
-curl -OL https://github.com/mulesoft/api-console/archive/features/raml-1.0.zip
-unzip raml-1.0.zip
+curl -OL https://github.com/mulesoft/api-console/archive/feature/new-raml.zip
+unzip new-raml.zip
 
 echo "=== Replacing stylesheets ==="
-cp -r api-console-features-raml-1.0/dist .
+cp -r api-console-feature-new-raml/dist .
 for f in dist/styles/*; do
   file_name=$(basename $f)
   cp $f "$assets_dir/stylesheets/raml_console/$file_name.erb"
