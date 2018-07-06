@@ -6,5 +6,3 @@ Rails.application.config.assets.precompile += %w(
   raml_console/api-console.js
   .svg .eot .woff .ttf
 )
-
-# config.assets.precompile += %w( .svg .eot .woff .ttf)
