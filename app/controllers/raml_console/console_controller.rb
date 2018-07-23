@@ -1,3 +1,5 @@
+require_dependency "raml_console/application_controller"
+
 module RamlConsole
   class ConsoleController < ApplicationController
 
