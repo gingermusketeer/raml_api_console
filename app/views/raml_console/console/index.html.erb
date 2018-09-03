@@ -9,5 +9,12 @@
   <script>
     $.noConflict();
   </script>
+  <script>
+    ClientOAuth2.prototype.unpatchedRequest = ClientOAuth2.prototype.request
+    ClientOAuth2.prototype.request = function(options, done) {
+      options.method = options.method.toUpperCase()
+      this.unpatchedRequest(options, done)
+    }
+  </script>
 </div>
 <% end %>
