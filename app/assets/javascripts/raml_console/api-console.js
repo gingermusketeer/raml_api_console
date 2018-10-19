@@ -535,6 +535,7 @@
             $scope.traits = null;
             $scope.methodInfo = {};
           } else {
+            $rootScope.$broadcast('updateTokenScopes')
             jQuery($this).addClass('raml-console-is-active');
             jQuery($this).siblings('.raml-console-tab').removeClass('raml-console-is-active');
           }
@@ -1973,6 +1974,10 @@
         $scope.isImplicitEnabled = function () {
           return $scope.credentials.grant === 'token';
         };
+
+        $scope.$on('updateTokenScopes', function () {
+          $scope.scopes = $scope.$parent.securitySchemes.oauth_2_0.settings.scopes;
+        })
 
         $scope.grants = [
           {
